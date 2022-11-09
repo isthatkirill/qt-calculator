@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SecondWindow</class>
+ <widget class="QMainWindow" name="SecondWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>830</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>830</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>830</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>String operation</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>811</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #DCDCDC;</string>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>830</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuclearLeft">
+    <property name="title">
+     <string>Clear</string>
+    </property>
+    <addaction name="actionClear_left_box"/>
+    <addaction name="actionClear_right_box"/>
+    <addaction name="actionClear_All"/>
+   </widget>
+   <widget class="QMenu" name="menuMove">
+    <property name="title">
+     <string>Move</string>
+    </property>
+    <addaction name="actionFrom_left_box_to_right"/>
+    <addaction name="actionFrom_right_box_to_left_box"/>
+   </widget>
+   <widget class="QMenu" name="menuSwap">
+    <property name="title">
+     <string>Swap</string>
+    </property>
+    <addaction name="actionSwap"/>
+   </widget>
+   <widget class="QMenu" name="menuReverse">
+    <property name="title">
+     <string>Reverse</string>
+    </property>
+    <addaction name="actionReverse_left_box"/>
+    <addaction name="actionReverse_right_box"/>
+    <addaction name="actionReverse_All"/>
+   </widget>
+   <widget class="QMenu" name="menuConcat">
+    <property name="title">
+     <string>Concat</string>
+    </property>
+    <addaction name="actionConcat_left_with_right"/>
+    <addaction name="actionConcat_right_with_left"/>
+   </widget>
+   <addaction name="menuclearLeft"/>
+   <addaction name="menuMove"/>
+   <addaction name="menuSwap"/>
+   <addaction name="menuReverse"/>
+   <addaction name="menuConcat"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #f7e8c1;
+color: #3d3c3a;</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_A_About"/>
+   <addaction name="action_Q_Quit"/>
+  </widget>
+  <action name="actionClear_left_box">
+   <property name="text">
+    <string>Clear left box</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear left box</string>
+   </property>
+  </action>
+  <action name="actionClear_right_box">
+   <property name="text">
+    <string>Clear right box</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear right box</string>
+   </property>
+  </action>
+  <action name="actionFrom_left_box_to_right">
+   <property name="text">
+    <string>From left box to right box</string>
+   </property>
+   <property name="toolTip">
+    <string>From left box to right box</string>
+   </property>
+  </action>
+  <action name="actionFrom_right_box_to_left_box">
+   <property name="text">
+    <string>From right box to left box</string>
+   </property>
+   <property name="toolTip">
+    <string>From right box to left box</string>
+   </property>
+  </action>
+  <action name="actionSwap">
+   <property name="text">
+    <string>Swap</string>
+   </property>
+  </action>
+  <action name="actionClear_All">
+   <property name="text">
+    <string>Clear All</string>
+   </property>
+  </action>
+  <action name="actionReverse_left_box">
+   <property name="text">
+    <string>Reverse left box</string>
+   </property>
+   <property name="toolTip">
+    <string>Reverse left box</string>
+   </property>
+  </action>
+  <action name="actionReverse_right_box">
+   <property name="text">
+    <string>Reverse right box</string>
+   </property>
+   <property name="toolTip">
+    <string>Reverse right box</string>
+   </property>
+  </action>
+  <action name="actionReverse_All">
+   <property name="text">
+    <string>Reverse All</string>
+   </property>
+  </action>
+  <action name="actionConcat_left_with_right">
+   <property name="text">
+    <string>Concat left with right</string>
+   </property>
+   <property name="toolTip">
+    <string>Concat left with right</string>
+   </property>
+  </action>
+  <action name="actionConcat_right_with_left">
+   <property name="text">
+    <string>Concat right with left</string>
+   </property>
+   <property name="toolTip">
+    <string>Concat right with left</string>
+   </property>
+  </action>
+  <action name="action_A_About">
+   <property name="text">
+    <string>[A] About</string>
+   </property>
+   <property name="toolTip">
+    <string>[A] About</string>
+   </property>
+   <property name="shortcut">
+    <string>A</string>
+   </property>
+  </action>
+  <action name="action_Q_Quit">
+   <property name="text">
+    <string>[Q] Quit</string>
+   </property>
+   <property name="toolTip">
+    <string>[Q] Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Q</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
